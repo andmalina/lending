@@ -15,6 +15,8 @@ const initialComments = [
   { name: 'Миша Волков', text: 'Свет в последней сцене — отдельная любовь. Расскажешь, как снимала?', time: '8 мин', initials: 'МВ', color: 'blue' },
 ];
 
+const featureImage = `${import.meta.env.BASE_URL}rutube-feature.jpg`;
+
 function Avatar({ initials, color='coral', small=false }) {
   return <div className={`avatar ${color} ${small ? 'small' : ''}`}>{initials}</div>;
 }
@@ -88,7 +90,7 @@ function App() {
               <div className="reaction">🔥 <span>12</span></div>
             </div>
             <div className="art-card card-video">
-              <img src="/rutube-feature.jpg" alt="Кадр городского видео"/>
+              <img src={featureImage} alt="Кадр городского видео"/>
               <span className="duration">06:48</span>
               <div className="tiny-play"><Play fill="currentColor" size={18}/></div>
             </div>
@@ -127,7 +129,7 @@ function App() {
             <div className="watch-grid">
               <div>
                 <div className={`video-player ${playing ? 'playing' : ''}`}>
-                  <img src="/rutube-feature.jpg" alt="Обложка видео «Город говорит»"/>
+                  <img src={featureImage} alt="Обложка видео «Город говорит»"/>
                   {!playing ? <button className="main-play" onClick={() => setPlaying(true)} aria-label="Воспроизвести"><Play fill="currentColor"/></button> : <div className="playing-note"><span className="pulse"/> Просмотр на Rutube <a href="https://rutube.ru" target="_blank" rel="noreferrer">открыть видео</a></div>}
                   <div className="rutube-badge">RUTUBE</div><span className="video-time">12:36</span>
                 </div>
