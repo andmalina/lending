@@ -48,7 +48,7 @@ function App() {
     <div className="app">
       <header className="nav-wrap">
         <nav className="nav container">
-          <a className="logo" href="#top" aria-label="АВТОРЫ"><span>АВТО</span><i>РЫ</i><b>•</b></a>
+          <a className="logo" href="#top" aria-label="RUTUBE КРУГ"><i>RUTUBE</i><span> КРУГ</span><b>•</b></a>
           <div className={`nav-links ${menu ? 'open' : ''}`}>
             <a href="#community" onClick={() => setMenu(false)}>Сообщество</a>
             <a href="#video" onClick={() => setMenu(false)}>Смотреть</a>
@@ -57,7 +57,7 @@ function App() {
           <div className="nav-actions">
             <button className="icon-btn hide-mobile" aria-label="Уведомления"><Bell size={19}/><span className="dot" /></button>
             <button className="login hide-mobile">Войти</button>
-            <button className="primary small-btn" onClick={() => setShowJoin(true)}>Стать автором <ArrowUpRight size={17}/></button>
+            <button className="primary small-btn" onClick={() => setShowJoin(true)}>Войти в круг <ArrowUpRight size={17}/></button>
             <button className="menu-btn" onClick={() => setMenu(!menu)}>{menu ? <X/> : <Menu/>}</button>
           </div>
         </nav>
@@ -66,18 +66,18 @@ function App() {
       <main id="top">
         <section className="hero container">
           <div className="hero-copy">
-            <div className="eyebrow"><Sparkles size={15}/> Место, где идеи находят своих</div>
-            <h1>Создавай.<br/><span>Показывай.</span><br/>Обсуждай.</h1>
-            <p>Пространство для авторов, где видео становятся поводом для настоящего разговора.</p>
+            <div className="eyebrow"><Sparkles size={15}/> Сообщество авторов RUTUBE</div>
+            <h1>Смотри.<br/><span>Обсуждай.</span><br/>Твори вместе.</h1>
+            <p>RUTUBE КРУГ — пространство, где видео с RUTUBE становятся поводом для настоящего разговора и новых совместных проектов.</p>
             <div className="hero-buttons">
-              <button className="primary large" onClick={() => setShowJoin(true)}>Присоединиться <ArrowUpRight size={20}/></button>
+              <button className="primary large" onClick={() => setShowJoin(true)}>Войти в круг <ArrowUpRight size={20}/></button>
               <a className="watch-link" href="#video"><span><Play fill="currentColor" size={16}/></span> Смотреть новое</a>
             </div>
             <div className="social-proof">
               <div className="avatar-stack">
                 {members.slice(0,4).map((m, i) => <Avatar key={m.name} {...m} small />)}
               </div>
-              <div><strong>2 800+ авторов</strong><small>уже делятся идеями</small></div>
+              <div><strong>2 800+ авторов</strong><small>уже в круге RUTUBE</small></div>
             </div>
           </div>
 
@@ -101,12 +101,12 @@ function App() {
           </div>
         </section>
 
-        <section className="marquee" aria-hidden="true"><div>ИДЕИ <span>✦</span> ЛЮДИ <span>✦</span> ВИДЕО <span>✦</span> ОБЩЕНИЕ <span>✦</span> ИДЕИ <span>✦</span> ЛЮДИ <span>✦</span> ВИДЕО</div></section>
+        <section className="marquee" aria-hidden="true"><div>RUTUBE <span>✦</span> КРУГ <span>✦</span> ВИДЕО <span>✦</span> ОБЩЕНИЕ <span>✦</span> RUTUBE <span>✦</span> КРУГ <span>✦</span> ВИДЕО</div></section>
 
         <section className="community container" id="community">
           <div className="section-heading">
-            <div><div className="section-number">01 / СООБЩЕСТВО</div><h2>Не просто подписчики.<br/><em>Твои люди.</em></h2></div>
-            <p>Общайся напрямую, находи соавторов и собирай вокруг своих идей живое сообщество.</p>
+            <div><div className="section-number">01 / КРУГ</div><h2>Не просто подписчики.<br/><em>Твой круг.</em></h2></div>
+            <p>Общайся напрямую с авторами RUTUBE, находи соавторов и собирай вокруг своих идей живое сообщество.</p>
           </div>
           <div className="people-grid">
             {members.map((m, i) => (
@@ -166,7 +166,7 @@ function App() {
           </div>
           <div className="steps">
             <article><span>01</span><div className="step-icon coral-bg"><Users/></div><h3>Создай профиль</h3><p>Расскажи, что делаешь, и найди близких по духу авторов.</p></article>
-            <article><span>02</span><div className="step-icon yellow-bg"><Link/></div><h3>Добавь видео</h3><p>Поделись ссылкой на свой ролик с Rutube — без сложных загрузок.</p></article>
+            <article><span>02</span><div className="step-icon yellow-bg"><Link/></div><h3>Добавь видео</h3><p>Поделись ссылкой на свой ролик с RUTUBE — без сложных загрузок.</p></article>
             <article><span>03</span><div className="step-icon blue-bg"><MessageCircle/></div><h3>Начни разговор</h3><p>Получай реакции, обсуждай детали и создавай новое вместе.</p></article>
           </div>
         </section>
@@ -174,25 +174,25 @@ function App() {
         <section className="cta container">
           <div className="cta-inner">
             <div className="cta-spark">✦</div><div className="cta-bubble">💬</div>
-            <p>ТВОЯ ИДЕЯ УЖЕ ГОТОВА</p><h2>Покажи её <i>своим.</i></h2>
-            <button className="dark-button" onClick={() => setShowJoin(true)}>Создать профиль <ArrowUpRight/></button>
+            <p>ТВОЯ ИДЕЯ УЖЕ ГОТОВА</p><h2>Покажи её <i>кругу.</i></h2>
+            <button className="dark-button" onClick={() => setShowJoin(true)}>Войти в круг <ArrowUpRight/></button>
             <small>Бесплатно. Без рекламы. По-настоящему.</small>
           </div>
         </section>
       </main>
 
       <footer className="footer container">
-        <a className="logo" href="#top"><span>АВТО</span><i>РЫ</i><b>•</b></a>
-        <p>Место для тех, кому есть что сказать.</p>
+        <a className="logo" href="#top"><i>RUTUBE</i><span> КРУГ</span><b>•</b></a>
+        <p>Круг авторов RUTUBE — место для тех, кому есть что сказать.</p>
         <div><a href="#community">Сообщество</a><a href="#video">Видео</a><a href="#how">О проекте</a></div>
-        <small>© 2026 АВТОРЫ</small>
+        <small>© 2026 RUTUBE КРУГ</small>
       </footer>
 
       {showJoin && <div className="modal-backdrop" onMouseDown={() => setShowJoin(false)}>
         <div className="modal" onMouseDown={e => e.stopPropagation()}>
           <button className="modal-close" onClick={() => setShowJoin(false)}><X/></button>
           {joined ? <div className="success"><div><Check/></div><h3>Ты с нами!</h3><p>Проверь почту — мы отправили ссылку для входа.</p></div> : <>
-            <div className="eyebrow"><Sparkles size={14}/> Присоединиться</div><h3>Добро пожаловать<br/>в круг авторов</h3><p>Один шаг — и можно делиться, смотреть и обсуждать.</p>
+            <div className="eyebrow"><Sparkles size={14}/> Присоединиться</div><h3>Добро пожаловать<br/>в RUTUBE КРУГ</h3><p>Один шаг — и можно делиться, смотреть и обсуждать.</p>
             <form onSubmit={join}><label>Как тебя зовут?<input required placeholder="Например, Настя"/></label><label>Твоя почта<input required type="email" placeholder="hello@example.ru"/></label><button className="primary large" type="submit">Создать профиль <ArrowUpRight/></button></form>
           </>}
         </div>
